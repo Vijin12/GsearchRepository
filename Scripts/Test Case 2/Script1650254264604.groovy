@@ -17,4 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-println("Haiii from Testcase")
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://www.google.com/')
+
+WebUI.setText(findTestObject('Object Repository/Page_Google/input__q'), 'Manual Testing')
+
+WebUI.sendKeys(findTestObject('Object Repository/Page_Google/input__q'), Keys.chord(Keys.ENTER))
+
+WebUI.closeBrowser()
